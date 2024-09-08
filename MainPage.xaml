@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMaratona.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
+
+    <ContentPage.Content>
+        <Grid>
+            <!--
+                zxing é o componente externo importado da bibliotecas zxing caso o mesmo nao seja reconhecido
+                deve-se intalar zxing.netmaui e zxing.control.
+                x:Name="cameraView" responsavel por enviar o valor
+            -->
+            <zxing:BarcodeGeneratorView
+                x:Name="cameraView"
+                Margin="3"
+                ForegroundColor="DarkBlue"
+                Format="QrCode"
+                HeightRequest="100"
+                WidthRequest="100"
+                Value="https://dotnet.microsoft.com" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
